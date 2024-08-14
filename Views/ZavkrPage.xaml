@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.ZavkrPage"
+             Title="Текущая заявка"
+             Shell.BackgroundColor="red"
+             Shell.TitleColor="White">
+
+
+    <StackLayout>
+        <Label x:Name="titleLabel" Margin="10"/>
+        <!--<Label x:Name="descriptionLabel" />-->
+
+        <Button Text="Фото клиента" Clicked="OnButtonPhotoClientClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+            <Button.ImageSource>
+                <FileImageSource File="account.png" />
+            </Button.ImageSource>
+        </Button>
+        <Button Text="Фото с места жительства" Clicked="OnButtonZhitelstvaClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+            <Button.ImageSource>
+                <FileImageSource File="bed.png"/>
+            </Button.ImageSource>
+        </Button>
+        <Button Text="Фото с места деятельности" Clicked="OnButtonDeatelnostiClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+            <Button.ImageSource>
+                <FileImageSource File="shovel.png"/>
+            </Button.ImageSource>
+        </Button>
+        <Button Text="Залог" Clicked="OnButtonZalogClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+            <Button.ImageSource>
+                <FileImageSource File="downloads.png"/>
+            </Button.ImageSource>
+        </Button>
+        
+    </StackLayout>
+
+</ContentPage>

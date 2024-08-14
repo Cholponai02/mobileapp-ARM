@@ -1,0 +1,35 @@
+using MauiApp1.Constants;
+using MauiApp1.Models;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+
+namespace MauiApp1.Models
+{
+    public static class PlayStoreVersionChecker
+    {
+        public static async Task<string> GetLatestVersionFromDatabase()
+        {
+            string url = ServerConstants.SERVER_ROOT_URL + "api/LoanReference/GetMobileAppVersion?Id=2";
+            string version = "";
+            using var httpClient = new HttpClient();
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseData = await response.Content.ReadAsStringAsync(); //"[{\"version\":\"1.0.3\",\"opSystem\":\"Android Version\"}]"
+                var data = JsonConvert.DeserializeObject<List<ArmAppVersion>>(responseData);
+                if (data != null && data.Count > 0)
+                {
+                    version = data[0].Version.Trim();
+                    return version;
+                }
+                else
+                {
+                    throw new Exception("No data found in the response.");
+                }
+            }
+            return version;
+        }
+    }
+}

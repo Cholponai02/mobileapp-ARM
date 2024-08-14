@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp1"
+    xmlns:views="clr-namespace:MauiApp1.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Cалым Финанс"
+   BackgroundColor="Red">
+    
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="auto,*,auto">
+            <Image Grid.Column="0" Margin="5, 5, 0, 10" HorizontalOptions="Start" Source="salym_arm_horizontal_white.png"/>
+            <HorizontalStackLayout Grid.Column="2">
+                <!--<Label Text="Icon" BackgroundColor="Red"></Label>-->
+            </HorizontalStackLayout>
+        </Grid>
+    </Shell.TitleView>
+    
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="MainPage" />
+
+    <TabBar>
+
+        
+
+        <ShellContent
+            Title="Главная"
+            Icon="home_icon.png"
+            ContentTemplate="{DataTemplate views:HomePage}"
+            Route="HomePage"
+            Shell.NavBarIsVisible="True"
+        />
+
+        <ShellContent
+            Title="Аккаунт"
+            Icon="account_icon.png"
+            ContentTemplate="{DataTemplate views:AboutPage}"
+            Shell.NavBarIsVisible="False"
+            Route="AccountPage"
+        />
+    </TabBar>
+
+</Shell>

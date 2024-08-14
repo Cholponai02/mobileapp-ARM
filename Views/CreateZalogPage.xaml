@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.CreateZalogPage"
+             xmlns:localF="clr-namespace:MauiApp1"
+             Title="CreateZalogPage">
+    <VerticalStackLayout Margin="10,10,10,10">
+        <Label Text="Создать залог"  FontAttributes="Bold"  
+            VerticalOptions="Center" HorizontalOptions="Center" />
+        <Border    Margin="0,20,0,20">
+            <Picker x:Name="zalPicker"  FontAttributes="Bold"  
+                Title="Выберите вид залога " VerticalOptions="Center" HorizontalOptions="Center"  >
+                <Picker.Items>
+                    <x:String>Земельный участок</x:String>
+                    <x:String>Жилая недвижимость</x:String>
+                    <x:String>Транспортное средство</x:String>
+                    <x:String>Другие</x:String>
+                </Picker.Items>
+            </Picker>
+        </Border>
+        <Button Text="Сохранить" VerticalOptions="Center" FontAttributes="Bold"  
+            HorizontalOptions="Center" Clicked="OnSaveButtonClicked"  BackgroundColor="#d01f24" />
+        
+        <ActivityIndicator x:Name="loadingIndicator"
+           IsRunning="False"
+           IsVisible="False"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

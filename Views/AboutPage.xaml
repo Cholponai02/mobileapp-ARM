@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.AboutPage"
+             xmlns:localF="clr-namespace:MauiApp1"
+             Title="AboutPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Профиль"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
+            FontAttributes="Bold"
+            Margin="10, 15,0,0"/>
+        <Label x:Name="titleLabel" Margin="10, 10,0,0" VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
+            FontAttributes="Bold"
+            TextColor="Red"/>
+        <Grid ColumnDefinitions="*,auto" Margin="2, 10, 20, 0">
+            <Label Text="Выберите размер шрифта" Margin="10, 10,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" Grid.Column="0"/>
+            <Picker x:Name="FontSizePicker" SelectedIndexChanged="OnFontSizePickerSelectedIndexChanged" Grid.Column="1" >
+                <Picker.Items>
+                    <x:String>Маленький</x:String>
+                    <x:String>Большой</x:String>
+                </Picker.Items>
+            </Picker>
+        </Grid>
+        <Button Text="Выйти" Margin="20, 20, 20, 10" Clicked="OnExit" TextColor="White" BackgroundColor="#ff0000" FontAttributes="Bold"/>
+         <Label x:Name="versionLabel" Margin="10, 10,0,0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Gray"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

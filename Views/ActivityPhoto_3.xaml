@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" MauiApp1.Views.ActivityPhoto_3"
+             xmlns:localF="clr-namespace: MauiApp1"
+             xmlns:localP="clr-namespace: MauiApp1.Views"
+             Title="Фото места деятельности 3"
+             Shell.BackgroundColor="Red"
+             Shell.TitleColor="White">
+    <StackLayout>
+    <VerticalStackLayout>
+        <Label 
+           Text="Фото с третьей месты деятельности"
+           VerticalOptions="Center" Margin="15, 0, 0, 0"
+           HorizontalOptions="Center"  FontAttributes="Bold"
+             />
+
+        <Button Text="Сделать фото и отправить" 
+               Clicked="OnTakePhotoButtonClicked" Margin="10" BackgroundColor="#ff0000" 
+               FontAttributes="Bold"  />
+        <ActivityIndicator x:Name="loadingIndicator"
+                   IsRunning="False"
+                   IsVisible="False"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+        <Button Text="Сделать фото и сохранить в галерею" Clicked="OnTakeGalleryPhotoClicked" Margin="20, 20, 20, 0" BackgroundColor="#cc0000" FontAttributes="Bold" />
+        <Button Text="Выбрать и отправить фото из галереии" Clicked="OnUploadPhotoClicked" Margin="20,15,20,0" BackgroundColor="#d01f24" FontAttributes="Bold" />
+    </VerticalStackLayout>
+        <Label  x:Name="totalNum"
+            VerticalOptions="EndAndExpand"  HorizontalOptions="Center" Margin="5,0,0,20" TextColor="#4f9ff0"
+            FontAttributes="Bold" />
+        </StackLayout>
+</ContentPage>

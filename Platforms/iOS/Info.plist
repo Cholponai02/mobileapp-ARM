@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>keychain-access-groups</key>
+		<array>
+			<string>$(AppIdentifierPrefix)com.companyname.mauiapp1</string>
+		</array>
+	<key>CFBundleDisplayName</key>
+	<string>Салым АРМ</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Ваше приложение использует ваше местоположение для улучшения пользовательского опыта.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Ваше приложение использует камеру для съемки фотографий и видео.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Ваше приложение использует доступ к фотоальбому для сохранения и загрузки изображений.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Ваше приложение использует микрофон для записи звука.</string>
+</dict>
+</plist>

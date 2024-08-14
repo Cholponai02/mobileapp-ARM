@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class=" MauiApp1.Views.Zalog"
+             xmlns:localF="clr-namespace: MauiApp1"
+             Title="Залоги"
+             Shell.BackgroundColor="Red"
+             Shell.TitleColor="White">
+
+    <StackLayout Margin="15"  >
+        <Button Text="Создать залог" Clicked="OnCreateZalogClicked" Margin="20,15,20,10" BackgroundColor="#e8702e" FontAttributes="Bold" 
+                 >
+            <Button.ImageSource>
+                <FileImageSource File="create.png" />
+            </Button.ImageSource>
+        </Button>
+        <Label x:Name="emptyZalog" Margin="10, 10,0,0" VerticalOptions="Center" 
+     HorizontalOptions="Center" 
+      
+     FontAttributes="Bold"
+     TextColor="Red"/>
+
+
+        <!--<Frame Margin="0,0,0,10"> не использовать.Причина System.ObjectDisposedException: 'Cannot access a disposed object.-->
+        <CollectionView ItemsSource="{Binding ZalogiList}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Black"    Margin="0,0,0,10" Padding="10" >
+                        <StackLayout Spacing="0">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="№ " FontAttributes="Bold"    />
+                                <Label Text= "{Binding ZalogId}" FontAttributes="Bold"    />
+                            </StackLayout>
+                            <!--<StackLayout Orientation="Horizontal">
+                                        <Label Text="{local:Translate txtFIO}" FontAttributes="Bold"/>
+                                        <Label Text= "{Binding txtFio}" />
+                                    </StackLayout>-->
+                            <StackLayout>
+                                <Grid ColumnDefinitions="*,auto">
+                                    <Label Text="Тип залога" FontAttributes="Bold" Grid.Column="0"    />
+                                    <Label Grid.Column="1"    >
+                                        <Label.Triggers  >
+                                            <DataTrigger TargetType="Label" Binding="{Binding TipZalog}" Value="1">
+                                                <Setter Property="Text" Value="Земельный участок" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding TipZalog}" Value="3">
+                                                <Setter Property="Text" Value="Жилая недвижимость" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding TipZalog}" Value="4">
+                                                <Setter Property="Text" Value="Транспорт" />
+                                            </DataTrigger>
+                                            <DataTrigger TargetType="Label" Binding="{Binding TipZalog}" Value="5">
+                                                <Setter Property="Text" Value="Другие" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </Grid>
+                            </StackLayout>
+
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFrameTapped"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!--</Frame>-->
+
+    </StackLayout>
+    
+</ContentPage>
