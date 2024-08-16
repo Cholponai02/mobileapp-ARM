@@ -57,8 +57,8 @@
                 <!--<Button Text="✔" Grid.Row="3" Grid.Column="2" Clicked="OnSubmitButtonClicked" Margin="5" FontSize="35" BackgroundColor="LightGray" TextColor="Black" FontAttributes="Bold"/>-->
 
                 <Button Grid.Row="3" Grid.Column="2" Clicked="OnSubmitExitClicked" Margin="5" FontSize="20" BackgroundColor="LightGray" TextColor="Black" FontAttributes="Bold" HeightRequest="70">
-                    <Button.ImageSource>
-                        <FileImageSource File="logout_strelka.png" />
+                    <Button.ImageSource >
+                        <FileImageSource File="logout_strelka.png"/>
                     </Button.ImageSource>
                 </Button>
 

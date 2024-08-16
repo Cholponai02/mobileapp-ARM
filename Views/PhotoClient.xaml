@@ -8,19 +8,19 @@
              Shell.TitleColor="White">
     <VerticalStackLayout>
         <Label 
-            Text="Фото клиента"
+            Text="Фото клиента" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
             VerticalOptions="Center" FontAttributes="Bold" Margin="0,15,0,0"
             HorizontalOptions="Center"/>
-        <Button Text="Сделать фото клиента с паспортом в руке" Clicked="OnTakePhotoSelfieButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold"/>
-        <Button Text="Сделать фото паспорта с лицевой стороны" Clicked="OnTakePhotoFrontPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold"/>
-        <Button Text="Сделать фото пасторта с обратной стороны" Clicked="OnTakePhotoBackPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold"/>
+        <Button Text="Сделать фото клиента с паспортом в руке" Clicked="OnTakePhotoSelfieButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото паспорта с лицевой стороны" Clicked="OnTakePhotoFrontPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото пасторта с обратной стороны" Clicked="OnTakePhotoBackPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         <Button  Text="Список поручителей" Clicked="OnListPochButtonClicked" Margin="20" BackgroundColor="#e8702e" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
             <Button.ImageSource>
                 <FileImageSource File="poruch_1.png" />
             </Button.ImageSource>
         </Button>
         
-        <ActivityIndicator x:Name="loadingIndicator"
+        <ActivityIndicator x:Name="loadingIndicator" 
                    IsRunning="False"
                    IsVisible="False"
                    HorizontalOptions="Center"

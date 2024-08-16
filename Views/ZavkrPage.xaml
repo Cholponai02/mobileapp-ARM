@@ -2,31 +2,32 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.Views.ZavkrPage"
+             xmlns:localF="clr-namespace:MauiApp1"
              Title="Текущая заявка"
              Shell.BackgroundColor="red"
              Shell.TitleColor="White">
 
 
     <StackLayout>
-        <Label x:Name="titleLabel" Margin="10"/>
+        <Label x:Name="titleLabel" Margin="10" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         <!--<Label x:Name="descriptionLabel" />-->
 
-        <Button Text="Фото клиента" Clicked="OnButtonPhotoClientClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+        <Button Text="Фото клиента" Clicked="OnButtonPhotoClientClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
             <Button.ImageSource>
                 <FileImageSource File="account.png" />
             </Button.ImageSource>
         </Button>
-        <Button Text="Фото с места жительства" Clicked="OnButtonZhitelstvaClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+        <Button Text="Фото с места жительства" Clicked="OnButtonZhitelstvaClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
             <Button.ImageSource>
                 <FileImageSource File="bed.png"/>
             </Button.ImageSource>
         </Button>
-        <Button Text="Фото с места деятельности" Clicked="OnButtonDeatelnostiClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+        <Button Text="Фото с места деятельности" Clicked="OnButtonDeatelnostiClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
             <Button.ImageSource>
                 <FileImageSource File="shovel.png"/>
             </Button.ImageSource>
         </Button>
-        <Button Text="Залог" Clicked="OnButtonZalogClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold">
+        <Button Text="Залог" Clicked="OnButtonZalogClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
             <Button.ImageSource>
                 <FileImageSource File="downloads.png"/>
             </Button.ImageSource>

@@ -5,10 +5,10 @@
              xmlns:localF="clr-namespace:MauiApp1"
              Title="CreateZalogPage">
     <VerticalStackLayout Margin="10,10,10,10">
-        <Label Text="Создать залог"  FontAttributes="Bold"  
-            VerticalOptions="Center" HorizontalOptions="Center" />
+        <Label Text="Создать залог"  FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" 
+            VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource BoldLabelStyle}"/>
         <Border    Margin="0,20,0,20">
-            <Picker x:Name="zalPicker"  FontAttributes="Bold"  
+            <Picker x:Name="zalPicker"  Style="{StaticResource BoldLabelStyle}"
                 Title="Выберите вид залога " VerticalOptions="Center" HorizontalOptions="Center"  >
                 <Picker.Items>
                     <x:String>Земельный участок</x:String>
@@ -18,7 +18,7 @@
                 </Picker.Items>
             </Picker>
         </Border>
-        <Button Text="Сохранить" VerticalOptions="Center" FontAttributes="Bold"  
+        <Button Text="Сохранить" VerticalOptions="Center" FontAttributes="Bold"  FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
             HorizontalOptions="Center" Clicked="OnSaveButtonClicked"  BackgroundColor="#d01f24" />
         
         <ActivityIndicator x:Name="loadingIndicator"

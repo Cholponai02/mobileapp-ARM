@@ -6,27 +6,29 @@
              Title="ListPoruch">
     <VerticalStackLayout>
         <Label 
-            Text="Список поручителей" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Margin="0,15,0,0"
-            />
+            Text="Список поручителей" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource BoldLabelStyle}" Margin="0,15,0,5"
+            FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" />
 
         <CollectionView ItemsSource="{Binding allPoruch}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame BorderColor="Black"  BackgroundColor="{DynamicResource BackgroundColor}" Margin="15" Padding="15" >
+                <StackLayout>
+                    <Frame BorderColor="Yellow" BackgroundColor="Beige" Margin="0,0,0,10" Padding="10" >
                         <StackLayout Spacing="0">
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="ФИО: " FontAttributes="Bold"  />
-                                <Label Text= "{Binding Fio}" FontAttributes="Bold"  />
+                                <Label Text="ФИО: " Margin="1, 1, 0, 0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+                                <Label Text= "{Binding Fio}" Margin="10, 0, 0, 0" Style="{StaticResource BoldLabelStyle}" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" />
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="ИНН: " FontAttributes="Bold"  />
-                                <Label Text= "{Binding Inn}" FontAttributes="Bold"  />
+                                <Label Text="ИНН: " Margin="1, 1, 0, 0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" />
+                                <Label Text= "{Binding Inn}" Margin="10, 0, 0, 0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" />
                             </StackLayout>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnFrameTapped"/>
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
                     </Frame>
+                </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

@@ -58,7 +58,7 @@ public partial class ActivityPhoto_2 : ContentPage
             loadingIndicator.IsVisible = false;
             if (result == "OK")
             {
-                await DisplayAlert("Успех", "������� ����������", "OK");
+                await DisplayAlert("Успех", "Фотографии отправлены", "OK");
             }
         }
 

@@ -18,16 +18,16 @@
             FontAttributes="Bold"
             TextColor="Red"/>
         <Grid ColumnDefinitions="*,auto" Margin="2, 10, 20, 0">
-            <Label Text="Выберите размер шрифта" Margin="10, 10,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" Grid.Column="0"/>
-            <Picker x:Name="FontSizePicker" SelectedIndexChanged="OnFontSizePickerSelectedIndexChanged" Grid.Column="1" >
+            <Label Text="Выберите размер шрифта" Margin="10, 10,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" Grid.Column="0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+            <Picker x:Name="FontSizePicker" SelectedIndexChanged="OnFontSizePickerSelectedIndexChanged" Grid.Column="1" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">
                 <Picker.Items>
                     <x:String>Маленький</x:String>
                     <x:String>Большой</x:String>
                 </Picker.Items>
             </Picker>
         </Grid>
-        <Button Text="Выйти" Margin="20, 20, 20, 10" Clicked="OnExit" TextColor="White" BackgroundColor="#ff0000" FontAttributes="Bold"/>
-         <Label x:Name="versionLabel" Margin="10, 10,0,0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Gray"/>
+        <Button Text="Выйти" Margin="20, 20, 20, 10" Clicked="OnExit" TextColor="White" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+         <Label x:Name="versionLabel" Margin="10, 10,0,0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Gray" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         
     </VerticalStackLayout>
 </ContentPage>

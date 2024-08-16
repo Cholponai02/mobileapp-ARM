@@ -9,12 +9,12 @@
 
     <VerticalStackLayout>
         <Label 
-        Text="Деятельности клиента"
+        Text="Деятельности клиента" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
         VerticalOptions="Center" 
         HorizontalOptions="Center"  />
-        <Button Text="Деятельносить № 1" Clicked="OnTakeFirstActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold"  />
-        <Button Text="Деятельносить № 2" Clicked="OnTakeSecondActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold"  />
-        <Button Text="Деятельносить № 3" Clicked="OnTakeThirdActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold"  />
+        <Button Text="Деятельносить № 1" Clicked="OnTakeFirstActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Деятельносить № 2" Clicked="OnTakeSecondActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Деятельносить № 3" Clicked="OnTakeThirdActivityButtonClicked" Margin="10" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
     </VerticalStackLayout>
 
 </ContentPage>
