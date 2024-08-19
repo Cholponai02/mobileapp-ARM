@@ -17,6 +17,12 @@
             FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
             FontAttributes="Bold"
             TextColor="Red"/>
+
+        <!-- <Grid ColumnDefinitions="*,auto" Margin="2, 10, 20, 0">
+            <Label Text="Выберите язык приложения" Margin="10, 10,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" Grid.Column="0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+            <Picker x:Name="LanguagePicker" SelectedIndexChanged="LanguageChanged" VerticalOptions="Center" Grid.Column="1" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        </Grid>  -->
+
         <Grid ColumnDefinitions="*,auto" Margin="2, 10, 20, 0">
             <Label Text="Выберите размер шрифта" Margin="10, 10,0,0" VerticalOptions="Center" FontAttributes="Bold" TextColor="{DynamicResource PrimaryTextColor}" Grid.Column="0" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
             <Picker x:Name="FontSizePicker" SelectedIndexChanged="OnFontSizePickerSelectedIndexChanged" Grid.Column="1" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}">

@@ -1,5 +1,5 @@
 using MauiApp1.Models;
-
+using MauiApp1.Resources.Localization;
 namespace MauiApp1.Views
 {
     public partial class AboutPage : ContentPage
@@ -38,19 +38,19 @@ namespace MauiApp1.Views
             Application.Current.Quit();
             //await Shell.Current.GoToAsync($"//{nameof(LoginPageViewModel)}");
         }
-    //       private void LanguageChanged(object sender, EventArgs e)
+    // private void LanguageChanged(object sender, EventArgs e)
     // {
-        // var selectedLanguage = LanguagePicker.SelectedItem.ToString();
-        // var languages = new Dictionary<string, string>
-        //     {
-        //         { "russina", "ru-RU" },
-        //         { "kyrgyz", "ky-KY" }
-        //     };
+    //     var selectedLanguage = LanguagePicker.SelectedItem.ToString();
+    //     var languages = new Dictionary<string, string>
+    //         {
+    //             { "russina", "ru-RU" },
+    //             { "kyrgyz", "ky-KY" }
+    //         };
 
-        // if (languages.TryGetValue(selectedLanguage, out var cultureCode))
-        // {
-        //    // LocalizationResourceManager.Instance.SetCulture(new CultureInfo(cultureCode));
-        // }
+    //     if (languages.TryGetValue(selectedLanguage, out var cultureCode))
+    //     {
+    //        // LocalizationResourceManager.Instance.SetCulture(new CultureInfo(cultureCode));
+    //     }
     // }
 
     // public LocalizationResourceManager LocalizationResourceManager { get; }
