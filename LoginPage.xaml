@@ -61,7 +61,8 @@
                 </Frame>
 
                 <Button Text="Войти" BackgroundColor="#d01f24" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
-                
+                <Button Text="Регистрация" BackgroundColor="#d01f24" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Clicked="OnButtonRegisterClicked"/>
+
                 <!--<StackLayout>
                     <Label Text="Новый пользователь" TextColor="DarkGrey" FontSize="Small"  />
                 </StackLayout>-->

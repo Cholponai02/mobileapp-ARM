@@ -33,13 +33,13 @@ public partial class ZavkrPage : ContentPage
             }
             else
             {
-                await DisplayAlert("Прелупреждение", "Геолокация у Вас не работает. Фотографии будут бещ местоположения", "OK");
+                await DisplayAlert("Предупреждение", "Геолокация у Вас не работает. Фотографии будут без местоположения", "OK");
             }
         }
         catch (FeatureNotEnabledException ex)
         {
             await DisplayAlert("Ошибка", "Не удалось получить местоположение", "OK");
-            await DisplayAlert("Подсказка", "Включите геолокацию", "OK");
+            await DisplayAlert("Подсказка", "Включите местоположение, чтобы продолжить работу", "OK");
             await Shell.Current.GoToAsync("//HomePage");
         }
         catch (Exception ex)

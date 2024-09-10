@@ -30,17 +30,18 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>keychain-access-groups</key>
 		<array>
-			<string>$(AppIdentifierPrefix)com.companyname.mauiapp1</string>
+			<string>$(AppIdentifierPrefix)com.companyname.armzalogapp</string>
 		</array>
 	<key>CFBundleDisplayName</key>
 	<string>Салым АРМ</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>Ваше приложение использует ваше местоположение для улучшения пользовательского опыта.</string>
+    <string>Приложение использует ваше местоположение для предоставления информации о ближайших местах. Ваше местоположение необходимо для точного отображения рекомендаций на карте.</string>
     <key>NSCameraUsageDescription</key>
-    <string>Ваше приложение использует камеру для съемки фотографий и видео.</string>
+   <string>Приложение использует камеру для создания фотографий и видео, которые вы можете загружать в свой профиль. Например, вы можете сделать фото места и сразу добавить.</string>
     <key>NSPhotoLibraryUsageDescription</key>
-    <string>Ваше приложение использует доступ к фотоальбому для сохранения и загрузки изображений.</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Ваше приложение использует микрофон для записи звука.</string>
+	<string>Приложение использует доступ к вашей фотобиблиотеке для сохранения созданных вами изображений и загрузки существующих фотографий в ваш профиль. Например, вы можете выбрать фото из галереи и использовать его по назначению.</string>    
+	<key>CFBundleIdentifier</key>
+	<string>com.companyname.armzalogapp</string>
+	<key>ITSAppUsesNonExemptEncryption</key><false/>
 </dict>
 </plist>

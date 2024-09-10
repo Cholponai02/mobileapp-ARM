@@ -33,4 +33,8 @@ public partial class LoginPage : ContentPage
             showPasswordIcon.Source = "show_icon.png";
         }
     }
+    private void OnButtonRegisterClicked(object sender, EventArgs e)
+    {
+         Application.Current.MainPage.DisplayAlert("Успешно", "Заявка на регистрацию отправлена. Подойти в офис Компании Салым Финанс для получения логина и пароля", "OK");
+    }
 }

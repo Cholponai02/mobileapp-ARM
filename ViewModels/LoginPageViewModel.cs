@@ -35,8 +35,8 @@ namespace MauiApp1.ViewModels
                             if (statusLoc != PermissionStatus.Granted)
                             {
                                 Console.WriteLine("Отклонено в разрешении на доступ к локации");
-                                await Application.Current.MainPage.DisplayAlert("Отказано в разрешении", "нету доступа к локации", "OK");
-
+                                await Application.Current.MainPage.DisplayAlert("Местоположение отключено", 
+                                    "Некоторые функции приложения могут не работать без доступа к местоположению.", "OK");
                                 return;
                             }
                         }
@@ -47,8 +47,8 @@ namespace MauiApp1.ViewModels
                             if (status != PermissionStatus.Granted)
                             {
                                 Console.WriteLine("Отклонено разрешение на использование Камеры");
-                                await Application.Current.MainPage.DisplayAlert("Отказано в разрешении", "Отклонено разрешение на использование Камеры", "OK");
-                                await Application.Current.MainPage.DisplayAlert("Включите разрешение", "Дайте доступ к камере", "OK");
+                                await Application.Current.MainPage.DisplayAlert("Камера недоступна", 
+                                    "Некоторые функции приложения могут не работать без доступа к камере.", "OK");
                                 return;
                             }
                         }
@@ -58,9 +58,8 @@ namespace MauiApp1.ViewModels
                             status2 = await Permissions.RequestAsync<Permissions.StorageWrite>();
                             if (status2 != PermissionStatus.Granted)
                             {
-                                Console.WriteLine("Отклонено Write External Storage");
-                                await Application.Current.MainPage.DisplayAlert("Отказано в разрешении", "Отклонено разрешение на Хранилище", "OK");
-                                await Application.Current.MainPage.DisplayAlert("Включите разрешение", "Дайте доступ к Хранилище", "OK");
+                                await Application.Current.MainPage.DisplayAlert("Хранилище недоступно", 
+                                    "Некоторые функции приложения могут не работать без доступа к хранилищу.", "OK");
                                 return;
                             }
                         }
