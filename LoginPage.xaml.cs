@@ -35,6 +35,6 @@ public partial class LoginPage : ContentPage
     }
     private void OnButtonRegisterClicked(object sender, EventArgs e)
     {
-         Application.Current.MainPage.DisplayAlert("Успешно", "Заявка на регистрацию отправлена. Подойти в офис Компании Салым Финанс для получения логина и пароля", "OK");
+        Shell.Current.GoToAsync(nameof(RegistPage));
     }
 }

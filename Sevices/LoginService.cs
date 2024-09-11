@@ -61,5 +61,77 @@ namespace MauiApp1.Sevices
                 return null;
             }
         }
+    
+        public async Task<string> Registration(string lastName, string firstName, string phoneNumber, DateTime birthDate)
+        {
+            try
+            {
+                if (Connectivity.Current.NetworkAccess == NetworkAccess.Internet)
+                {
+                    var client = new HttpClient();
+                    string url = ServerConstants.SERVER_ROOT_URL + "api/LoanReference/RegistrationUsers";
+                    client.BaseAddress = new Uri(url);
+                    var regRequest = new IRegistrRequest
+                    {
+                        FirstName = firstName,
+                        LastName = lastName,
+                        PhoneNumber = phoneNumber,
+                        BirthDate = birthDate.ToString(),
+                    };
+
+                    var content = new StringContent(JsonConvert.SerializeObject(regRequest), Encoding.UTF8, "application/json");
+                    var response = await client.PostAsync(ServerConstants.SERVER_ROOT_URL + "api/LoanReference/RegistrationUsers", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var result = "OK";
+                        return result;
+                        
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+        }
+    
+        public async Task<string> LoginLog(string login, string fio, string otdel, string uniq)
+        {
+            var client = new HttpClient();
+            string url = ServerConstants.SERVER_ROOT_URL + "api/LoanReference/UserSalymLog";
+            client.BaseAddress = new Uri(url);
+            var loginRequest = new UserSalymArm
+            {
+                Otdel = otdel,
+                OtUid = login,
+                Fio = fio,
+                Uniq = uniq
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(loginRequest), Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(ServerConstants.SERVER_ROOT_URL + "api/LoanReference/UserSalymLog", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                result = "OK";
+                return result;
+            }
+            else
+            {
+                //await Application.Current.MainPage.DisplayAlert("Ошибка", "Ошибка при сохранении", "OK");
+                return null;
+            }
+        }
     }
 }

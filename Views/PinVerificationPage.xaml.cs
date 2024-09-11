@@ -1,4 +1,5 @@
 using MauiApp1.Models;
+using MauiApp1.Sevices;
 
 namespace  MauiApp1.Views;
 
@@ -28,6 +29,13 @@ public partial class PinVerificationPage : ContentPage
                 var pin = await SecureStorage.Default.GetAsync("pin");
                 if (!string.IsNullOrEmpty(pin) && enteredPin == pin)
                 {
+                    string ot_uid = await SecureStorage.Default.GetAsync("username") ?? "";
+                    string fio = await SecureStorage.Default.GetAsync("fio") ?? "";
+                    string otdel = await SecureStorage.Default.GetAsync("otdel") ?? "";
+                    string uniq = "";
+                    var service = new LoginService();
+                    string result = await service.LoginLog(ot_uid, fio, otdel, uniq);
+
                     await Shell.Current.GoToAsync("//HomePage");
                 }
                 else

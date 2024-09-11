@@ -30,7 +30,7 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>keychain-access-groups</key>
 		<array>
-			<string>$(AppIdentifierPrefix)com.companyname.armzalogapp</string>
+			<string>$(AppIdentifierPrefix)com.companyname.salymarm</string>
 		</array>
 	<key>CFBundleDisplayName</key>
 	<string>Салым АРМ</string>
@@ -41,7 +41,7 @@
     <key>NSPhotoLibraryUsageDescription</key>
 	<string>Приложение использует доступ к вашей фотобиблиотеке для сохранения созданных вами изображений и загрузки существующих фотографий в ваш профиль. Например, вы можете выбрать фото из галереи и использовать его по назначению.</string>    
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.armzalogapp</string>
+	<string>com.companyname.salymarm</string>
 	<key>ITSAppUsesNonExemptEncryption</key><false/>
 </dict>
 </plist>
