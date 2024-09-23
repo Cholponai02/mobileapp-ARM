@@ -8,9 +8,9 @@
         <Label Text="Фото поручителя " VerticalOptions="Center" HorizontalOptions="Center" 
             FontAttributes="Bold" Margin="0,15,0,0" />
 
-        <Button Text="Сделать фото поручителя с паспортом в руке" Clicked="OnTakePhotoSelfieButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
-        <Button Text="Сделать фото паспорта с лицевой стороны" Clicked="OnTakePhotoFrontPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
-        <Button Text="Сделать фото паспорта с обратной стороны" Clicked="OnTakePhotoBackPassButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото поручителя с паспортом в руке" Clicked="OnTakePhotoSelfieButtonClicked" Margin="20" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото паспорта с лицевой стороны" Clicked="OnTakePhotoFrontPassButtonClicked" Margin="20" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото паспорта с обратной стороны" Clicked="OnTakePhotoBackPassButtonClicked" Margin="20" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         
         <ActivityIndicator x:Name="loadingIndicator"
            IsRunning="False" IsVisible="False" HorizontalOptions="Center" VerticalOptions="Center" />

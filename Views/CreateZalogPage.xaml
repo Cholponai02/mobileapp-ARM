@@ -19,7 +19,7 @@
             </Picker>
         </Border>
         <Button Text="Сохранить" VerticalOptions="Center" FontAttributes="Bold"  FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
-            HorizontalOptions="Center" Clicked="OnSaveButtonClicked"  BackgroundColor="#d01f24" />
+            HorizontalOptions="Center" Clicked="OnSaveButtonClicked"  BackgroundColor="#cc0000" />
         
         <ActivityIndicator x:Name="loadingIndicator"
            IsRunning="False"

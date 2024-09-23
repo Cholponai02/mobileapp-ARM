@@ -23,7 +23,7 @@
             <Border Margin="10" StrokeShape="RoundRectangle 10" HeightRequest="75" Stroke="Transparent" Grid.Row="1" BackgroundColor="#f0f0f0">
                 <Entry x:Name="PinEntry2" Placeholder="****" IsPassword="True" MaxLength="4" Keyboard="Numeric" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="40" TextColor="#d01f24"/>
             </Border>
-            <Button Text="Сохранить PIN-код" Clicked="OnSetPinButtonClicked" Grid.Row="2" HeightRequest="50" Margin="10,40,10,0" VerticalOptions="Start" BackgroundColor="#d01f24" TextColor="White" FontSize="Medium" />
+            <Button Text="Сохранить PIN-код" Clicked="OnSetPinButtonClicked" Grid.Row="2" HeightRequest="50" Margin="10,40,10,0" VerticalOptions="Start" BackgroundColor="#cc0000" TextColor="White" FontSize="Medium" />
         </Grid>
     </StackLayout>
 

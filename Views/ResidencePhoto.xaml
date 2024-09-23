@@ -4,7 +4,7 @@
              x:Class="MauiApp1.Views.ResidencePhoto"
              xmlns:localF="clr-namespace:MauiApp1"
              Title="Фото места жительства"
-             Shell.BackgroundColor="Red"
+             Shell.BackgroundColor="#cc0000"
              Shell.TitleColor="White">
              <StackLayout>
     <VerticalStackLayout>
@@ -13,7 +13,7 @@
             VerticalOptions="Center" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
             HorizontalOptions="Center" />
 
-        <Button Text="Сделать фото и отправить" Clicked="OnTakePhotoButtonClicked" Margin="20" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Сделать фото и отправить" Clicked="OnTakePhotoButtonClicked" Margin="20" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         <ActivityIndicator x:Name="loadingIndicator"
                    IsRunning="False"
                    IsVisible="False"
@@ -21,7 +21,7 @@
                    VerticalOptions="Center" />
 
         <!-- <Button Text="Сделать фото и сохранить в галерею" Clicked="OnTakeGalleryPhotoClicked" Margin="20, 20, 20, 0" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/> -->
-        <Button Text="Выбрать и отправить фото из галерии" Clicked="OnUploadPhotoClicked" Margin="20,15,20,0" BackgroundColor="#d01f24" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Выбрать и отправить фото из галерии" Clicked="OnUploadPhotoClicked" Margin="20,15,20,0" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
 
     </VerticalStackLayout>
         <Label  x:Name="totalNum" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"

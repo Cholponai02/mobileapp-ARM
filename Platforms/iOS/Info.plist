@@ -33,7 +33,7 @@
 			<string>$(AppIdentifierPrefix)com.companyname.salymarm</string>
 		</array>
 	<key>CFBundleDisplayName</key>
-	<string>Салым АРМ</string>
+	<string>CreditARM</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
     <string>Приложение использует ваше местоположение для предоставления информации о ближайших местах. Ваше местоположение необходимо для точного отображения рекомендаций на карте.</string>
     <key>NSCameraUsageDescription</key>

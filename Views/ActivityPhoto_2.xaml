@@ -5,7 +5,7 @@
              xmlns:localF="clr-namespace: MauiApp1"
              xmlns:localP="clr-namespace: MauiApp1.Views"
              Title="Фото места деятельности 2"
-             Shell.BackgroundColor="Red"
+             Shell.BackgroundColor="#cc0000"
              Shell.TitleColor="White">
     <StackLayout>
         <VerticalStackLayout>
@@ -16,7 +16,7 @@
              />
 
         <Button Text="Сделать фото и отправить" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
-              Clicked="OnTakePhotoButtonClicked" Margin="10" BackgroundColor="#ff0000" 
+              Clicked="OnTakePhotoButtonClicked" Margin="10" BackgroundColor="#cc0000" 
               FontAttributes="Bold"   />
         <ActivityIndicator x:Name="loadingIndicator"
                    IsRunning="False"
@@ -24,7 +24,7 @@
                    HorizontalOptions="Center"
                    VerticalOptions="Center" />
         <!-- <Button Text="Сделать фото и сохранить в галерею" Clicked="OnTakeGalleryPhotoClicked" Margin="20, 20, 20, 0" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/> -->
-        <Button Text="Выбрать и отправить фото из галереии" Clicked="OnUploadPhotoClicked" Margin="20,15,20,0" BackgroundColor="#d01f24" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Выбрать и отправить фото из галереии" Clicked="OnUploadPhotoClicked" Margin="20,15,20,0" BackgroundColor="#cc0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
     </VerticalStackLayout>
 
         <Label  x:Name="totalNum" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"

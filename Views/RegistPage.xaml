@@ -49,7 +49,7 @@
                    HorizontalOptions="Center"/>
 
             <Button Text="Отправить" 
-                    BackgroundColor="#d01f24" 
+                    BackgroundColor="#cc0000" 
                     TextColor="White" 
                     FontAttributes="Bold" Clicked="OnButtonSendClicked"
                     CornerRadius="30" 

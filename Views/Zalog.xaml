@@ -4,11 +4,11 @@
              x:Class=" MauiApp1.Views.Zalog"
              xmlns:localF="clr-namespace: MauiApp1"
              Title="Залоги"
-             Shell.BackgroundColor="Red"
+             Shell.BackgroundColor="#cc0000"
              Shell.TitleColor="White">
 
     <StackLayout Margin="15"  >
-        <Button Text="Создать залог" Clicked="OnCreateZalogClicked" Margin="20,15,20,10" BackgroundColor="#e8702e" FontAttributes="Bold" 
+        <Button Text="Создать залог" Clicked="OnCreateZalogClicked" Margin="20,15,20,10" BackgroundColor="#cc0000" FontAttributes="Bold" 
                 FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}" >
             <Button.ImageSource>
                 <FileImageSource File="create.png" />
@@ -16,7 +16,7 @@
         </Button>
         <Label x:Name="emptyZalog" Margin="10, 10,0,0" VerticalOptions="Center" 
             HorizontalOptions="Center" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"
-            Style="{StaticResource BoldLabelStyle}" TextColor="Red"/>
+            Style="{StaticResource BoldLabelStyle}" TextColor="#cc0000"/>
 
 
         <!--<Frame Margin="0,0,0,10"> не использовать.Причина System.ObjectDisposedException: 'Cannot access a disposed object.-->

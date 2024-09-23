@@ -18,7 +18,7 @@
 
         <StackLayout>
             <Frame BackgroundColor="white" HeightRequest="120" WidthRequest="120" Margin="0,60,0,0" Padding="0" CornerRadius="25" HorizontalOptions="Center">
-            <Image Source="salym_arm_1_1.jpg" Grid.Row="0" Margin="10, 5, 10, 10"/>
+            <Image Source="salym_logo_l.png" Grid.Row="0" Margin="10, 5, 10, 10"/>
             </Frame>
             <Label Grid.Row="2" Text="Салым АРМ" HorizontalOptions="Center" FontSize="25" TextColor="White" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
         </StackLayout>
@@ -39,8 +39,8 @@
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" Margin="0, 15, 0, 0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="Red" HeightRequest="45" WidthRequest="45" CornerRadius="30" Padding="0" Margin="3">
-                            <Image Source="https://e7.pngegg.com/pngimages/58/482/png-clipart-computer-icons-user-login-icon-miscellaneous-monochrome-thumbnail.png" Aspect="AspectFill" Margin="0"/>
+                        <Frame BackgroundColor="#cc0000" HeightRequest="45" WidthRequest="45" CornerRadius="30" Padding="0" Margin="3">
+                            <Image Source="account.png" Aspect="AspectFill" Margin="0"/>
                         </Frame>
                         <Entry Text="{Binding UserName}" Placeholder="Логин" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                     </StackLayout>
@@ -48,7 +48,7 @@
 
                 <Frame BackgroundColor="Transparent" BorderColor="Black" Padding="0" Margin="0, 15, 0, 0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                     <StackLayout Orientation="Horizontal">
-                        <Frame BackgroundColor="Red" HeightRequest="45" WidthRequest="45" CornerRadius="30" Padding="0" Margin="3">
+                        <Frame BackgroundColor="#cc0000" HeightRequest="45" WidthRequest="45" CornerRadius="30" Padding="0" Margin="3">
                             <Image Source="key.png" Aspect="AspectFill" Margin="0"/>
                         </Frame>
                         <Entry x:Name="passwordEntry" Text="{Binding Password}" PlaceholderColor="Gray" Placeholder="Пароль" TextColor="{DynamicResource PrimaryTextColor}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand"  HeightRequest="48" Margin="0,0,5,0"/>
@@ -60,8 +60,8 @@
                     </StackLayout>
                 </Frame>
 
-                <Button Text="Войти" BackgroundColor="#d01f24" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
-                <Button Text="Регистрация" BackgroundColor="#d01f24" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Clicked="OnButtonRegisterClicked"/>
+                <Button Text="Войти" BackgroundColor="#cc0000" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Command="{Binding LoginCommand}"/>
+                <Button Text="Регистрация" BackgroundColor="#cc0000" TextColor="White" FontAttributes="Bold" CornerRadius="30" WidthRequest="320" Margin="0,15,0,0" Clicked="OnButtonRegisterClicked"/>
 
                 <!--<StackLayout>
                     <Label Text="Новый пользователь" TextColor="DarkGrey" FontSize="Small"  />

@@ -48,10 +48,10 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.png" Resize="false" BaseSize="167,167" Color="#de1e25" ForegroundScale="0.70" />
+		<MauiIcon Include="Resources\AppIcon\appicon.png" Resize="false" BaseSize="167,167" Color="#cc0000" ForegroundScale="0.70" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\salym_arm_1_1.jpg" BaseSize="160,160" Color="#ffffff" />
+		<MauiSplashScreen Include="Resources\Splash\salym_logo_l.png" BaseSize="160,160" Color="#ffffff" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -76,11 +76,7 @@
 </ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Splash\withbg.PNG" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiSplashScreen Include="Resources\Splash\withbg.PNG" />
+	  <MauiSplashScreen Include="Resources\Splash\salym_logo_l.png" />
 	</ItemGroup>
 
 	<ItemGroup>

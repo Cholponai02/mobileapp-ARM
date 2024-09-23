@@ -7,13 +7,13 @@
     xmlns:views="clr-namespace:MauiApp1.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="Cалым Финанс"
-   BackgroundColor="Red">
+   BackgroundColor="#cc0000">
     
     <Shell.TitleView>
         <Grid ColumnDefinitions="auto,*,auto">
             <Image Grid.Column="0" Margin="5, 5, 0, 10" HorizontalOptions="Start" Source="salym_arm_horizontal_white.png"/>
             <HorizontalStackLayout Grid.Column="2">
-                <!--<Label Text="Icon" BackgroundColor="Red"></Label>-->
+                <!--<Label Text="Icon" BackgroundColor="#cc0000"></Label>-->
             </HorizontalStackLayout>
         </Grid>
     </Shell.TitleView>

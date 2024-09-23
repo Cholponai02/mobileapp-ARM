@@ -7,7 +7,7 @@
     <StackLayout Padding="10" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
         
         <VerticalStackLayout>
-            <Image Source="salym_arm_1_1.jpg" Grid.Row="0"  HeightRequest="110"/>
+            <Image Source="salym_logo_l.png" Grid.Row="0"  HeightRequest="110"/>
             <Label Text="Введите PIN-код" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,0" />
         </VerticalStackLayout>
         
@@ -63,7 +63,7 @@
                 </Button>
 
             </Grid>
-            <Button Text="Выйти" Clicked="OnSubmitExitClicked" FontSize="25" BackgroundColor="#d01f24" TextColor="White" Margin="0,15,0,0" Opacity="0" IsEnabled="False"/>
+            <Button Text="Выйти" Clicked="OnSubmitExitClicked" FontSize="25" BackgroundColor="#cc0000" TextColor="White" Margin="0,15,0,0" Opacity="0" IsEnabled="False"/>
         </StackLayout>
 
     </StackLayout>
