@@ -1,5 +1,6 @@
 using MauiApp1.Models;
 using MauiApp1.Resources.Localization;
+using MauiApp1.Sevices;
 namespace MauiApp1.Views
 {
     public partial class AboutPage : ContentPage
@@ -35,7 +36,7 @@ namespace MauiApp1.Views
         { 
             SecureStorage.Default.RemoveAll();
             // Preferences.Default.Clear();
-            Application.Current.Quit();
+            await Shell.Current.GoToAsync("LoginPage");
             //await Shell.Current.GoToAsync($"//{nameof(LoginPageViewModel)}");
         }
     // private void LanguageChanged(object sender, EventArgs e)
@@ -72,6 +73,24 @@ namespace MauiApp1.Views
         //var session = await SessionManager.GetSessionAsync();
         //titleLabel.Text = session.Fio;
         titleLabel.Text = SessionManager.GetoFio();
+    }
+
+    private async void OnDelete(object sender, EventArgs e)
+    { 
+        bool isAgree = await DisplayAlert("Подтвердите действие", "Вы уверены что хотите удалить аккаунт", "Да", "Нет");
+        if(isAgree){
+            var otNom = await SecureStorage.GetAsync("otNom") ?? "";
+            int status = 4;
+            var service = new AccountRepository();
+            string result = await service.UpdateAccountStatus(otNom, status,"0");
+            if(result == "OK"){
+                SecureStorage.Default.RemoveAll();
+                // Preferences.Default.Clear();
+                await DisplayAlert("Успех", "Аккаунт удален", "Ок");
+            }
+            
+        }
+        
     }
 
     }

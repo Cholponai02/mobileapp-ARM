@@ -15,6 +15,12 @@ public partial class PoruchPhoto : ContentPage
     {
         try
         {
+            var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
+            if (status != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Ошибка", "Отказано в доступе к камере", "ОК");
+                return;
+            }
             string latitude = "";
             string longitude = "";
 
@@ -52,6 +58,12 @@ public partial class PoruchPhoto : ContentPage
     {
         try
         {
+            var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
+            if (status != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Ошибка", "Отказано в доступе к камере", "ОК");
+                return;
+            }
             string latitude = "";
             string longitude = "";
             var photoData = await TakePhotoAsync();
@@ -87,6 +99,12 @@ public partial class PoruchPhoto : ContentPage
     {
         try
         {
+            var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
+            if (status != PermissionStatus.Granted)
+            {
+                await DisplayAlert("Ошибка", "Отказано в доступе к камере", "ОК");
+                return;
+            }
             string latitude = "";
             string longitude = "";
             var photoData = await TakePhotoAsync();

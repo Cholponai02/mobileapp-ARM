@@ -33,6 +33,8 @@
             </Picker>
         </Grid>
         <Button Text="Выйти" Margin="20, 20, 20, 10" Clicked="OnExit" TextColor="White" BackgroundColor="#ff0000" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+        <Button Text="Удалить аккаунт" Margin="20, 20, 20, 10" Clicked="OnDelete" TextColor="White" BackgroundColor="Grey" FontAttributes="Bold" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
+
          <Label x:Name="versionLabel" Margin="10, 10,0,0" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Gray" FontSize="{Binding Source={x:Static localF:App.Settings}, Path=FontSize}"/>
         
     </VerticalStackLayout>

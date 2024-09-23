@@ -42,7 +42,7 @@
                         HorizontalOptions="Center"/>
 
             <Entry x:Name="PhoneNumberEntry" 
-                   Placeholder="Введите номер телефона" 
+                   Placeholder="Введите номер телефона 996xxxxxxxxx" 
                    TextColor="Black" PlaceholderColor="Gray"
                    FontAttributes="Bold" 
                    WidthRequest="300"

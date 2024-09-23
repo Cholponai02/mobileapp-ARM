@@ -36,6 +36,12 @@ public partial class ActivityPhoto_3 : ContentPage
     }
     private async void OnTakePhotoButtonClicked(object sender, EventArgs e)
     {
+        var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
+        if (status != PermissionStatus.Granted)
+        {
+            await DisplayAlert("Ошибка", "Отказано в доступе к камере", "ОК");
+            return;
+        }
         string latitude = _latitude;
         string longitude = _longitude;
         var photoData = await TakePhotoAsync();

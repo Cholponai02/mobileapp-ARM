@@ -26,9 +26,13 @@ public partial class RegistPage : ContentPage
             return;
         }
         var service = new LoginService();
-        string result = await service.Registration(lastName, firstName, phoneNumber, birthDate );
-                
+        string result = await service.Registration(lastName, firstName, phoneNumber.Trim(), birthDate );
+        // if(result == "OK"){
+        //     await Application.Current.MainPage.DisplayAlert("Успешно", "Заявка на регистрацию отправлена. Подойти в офис Компании Салым Финанс для получения логина и пароля", "OK");
+        // }
+        // else if (result == "not found"){
+        //     await Application.Current.MainPage.DisplayAlert("Ошибка", "Неправильный номер телефона. Подойти в офис Компании Салым Финанс для получения дополнительной информации", "OK");
+        // }        
 
-         await Application.Current.MainPage.DisplayAlert("Успешно", "Заявка на регистрацию отправлена. Подойти в офис Компании Салым Финанс для получения логина и пароля", "OK");
     }
 }

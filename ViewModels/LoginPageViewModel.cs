@@ -37,7 +37,7 @@ namespace MauiApp1.ViewModels
                                 Console.WriteLine("Отклонено в разрешении на доступ к локации");
                                 await Application.Current.MainPage.DisplayAlert("Местоположение отключено", 
                                     "Некоторые функции приложения могут не работать без доступа к местоположению.", "OK");
-                                return;
+                                // return;
                             }
                         }
                         var status = await Permissions.CheckStatusAsync<Permissions.Camera>();
@@ -49,7 +49,7 @@ namespace MauiApp1.ViewModels
                                 Console.WriteLine("Отклонено разрешение на использование Камеры");
                                 await Application.Current.MainPage.DisplayAlert("Камера недоступна", 
                                     "Некоторые функции приложения могут не работать без доступа к камере.", "OK");
-                                return;
+                                // return;
                             }
                         }
                         var status2 = await Permissions.CheckStatusAsync<Permissions.StorageWrite>();
@@ -60,7 +60,7 @@ namespace MauiApp1.ViewModels
                             {
                                 await Application.Current.MainPage.DisplayAlert("Хранилище недоступно", 
                                     "Некоторые функции приложения могут не работать без доступа к хранилищу.", "OK");
-                                return;
+                                // return;
                             }
                         }
                     }
@@ -71,7 +71,7 @@ namespace MauiApp1.ViewModels
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Ошибка входа", "Пользователь не найден или неверный пароль", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Ошибка входа", "Пользователь не найден или неверный пароль.\nПроверьте статус аккаунта, написав в компанию Салым Финанс", "OK");
                     Console.WriteLine("Пользователь не найден или неверный пароль");
                 }
 

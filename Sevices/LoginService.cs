@@ -84,8 +84,11 @@ namespace MauiApp1.Sevices
 
                     if (response.IsSuccessStatusCode)
                     {
-                        var result = "OK";
-                        return result;
+                        string responseData = await response.Content.ReadAsStringAsync();
+                        var data = JsonConvert.DeserializeObject<string>(responseData);
+                        await Application.Current.MainPage.DisplayAlert("Успешно", "Заявка на регистрацию отправлена. Подойти в офис Компании Салым Финанс для получения логина и пароля", "OK");
+
+                        return data;
                         
                     }
                     else
