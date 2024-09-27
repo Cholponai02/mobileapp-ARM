@@ -10,6 +10,6 @@ namespace MauiApp1.Sevices
     public interface ILoginRepository
     {
         Task<User> Login(string username, string password);
-        Task<string> LoginLog(string login, string fio, string otdel, string uniq);
+        Task<string> LoginLog(string login, string fio, string otdel, string uniq, string result);
     }
 }

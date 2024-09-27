@@ -21,10 +21,18 @@ namespace MauiApp1.ViewModels
         {
             if (!string.IsNullOrWhiteSpace(UserName) && !string.IsNullOrWhiteSpace(Password))
             {
+                var service = new LoginService();
+                string uniq = "iOS";
                 User userInfo = await loginRepository.Login(UserName, Password);
                 if (userInfo != null && userInfo?.UserNumber != 0) 
                 {
                     await SaveSessionAsync(UserName, userInfo.UserNumber.ToString(), userInfo.otFio, userInfo.DepartmentId.ToString());
+                    
+                    string ot_uid = userInfo.UserName ?? "";
+                    string fio = userInfo.otFio ?? "";
+                    string otdel = userInfo.DepartmentId.ToString() ?? "";
+                    string result1 = "моб - Успешный вход";
+                    string result = await service.LoginLog(ot_uid, fio, otdel,uniq, result1);
                     await Shell.Current.GoToAsync($"SetPinPage");
                     try
                     {
@@ -71,6 +79,8 @@ namespace MauiApp1.ViewModels
                 }
                 else
                 {
+                    string result1 = "моб - Ошибка входа";
+                    string result = await service.LoginLog(UserName, "", "",uniq, result1);
                     await Application.Current.MainPage.DisplayAlert("Ошибка входа", "Пользователь не найден или неверный пароль.\nПроверьте статус аккаунта, написав в компанию Салым Финанс", "OK");
                     Console.WriteLine("Пользователь не найден или неверный пароль");
                 }

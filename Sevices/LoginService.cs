@@ -108,7 +108,7 @@ namespace MauiApp1.Sevices
             }
         }
     
-        public async Task<string> LoginLog(string login, string fio, string otdel, string uniq)
+        public async Task<string> LoginLog(string login, string fio, string otdel, string uniq, string result1)
         {
             var client = new HttpClient();
             string url = ServerConstants.SERVER_ROOT_URL + "api/LoanReference/UserSalymLog";
@@ -118,7 +118,8 @@ namespace MauiApp1.Sevices
                 Otdel = otdel,
                 OtUid = login,
                 Fio = fio,
-                Uniq = uniq
+                Uniq = uniq,
+                Result = result1
             };
 
             var content = new StringContent(JsonConvert.SerializeObject(loginRequest), Encoding.UTF8, "application/json");

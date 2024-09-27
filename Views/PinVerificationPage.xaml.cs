@@ -27,19 +27,22 @@ public partial class PinVerificationPage : ContentPage
                 activityIndicator.IsRunning = true;
                 
                 var pin = await SecureStorage.Default.GetAsync("pin");
+                string ot_uid = await SecureStorage.Default.GetAsync("username") ?? "";
+                string fio = await SecureStorage.Default.GetAsync("fio") ?? "";
+                string otdel = await SecureStorage.Default.GetAsync("otdel") ?? "";
+                string uniq = "iOS";
+                var service = new LoginService();
                 if (!string.IsNullOrEmpty(pin) && enteredPin == pin)
                 {
-                    string ot_uid = await SecureStorage.Default.GetAsync("username") ?? "";
-                    string fio = await SecureStorage.Default.GetAsync("fio") ?? "";
-                    string otdel = await SecureStorage.Default.GetAsync("otdel") ?? "";
-                    string uniq = "";
-                    var service = new LoginService();
-                    string result = await service.LoginLog(ot_uid, fio, otdel, uniq);
+                    string result1 = "моб - Успешный вход (пин)";
+                    string result = await service.LoginLog(ot_uid, fio, otdel, uniq, result1);
 
                     await Shell.Current.GoToAsync("//HomePage");
                 }
                 else
                 {
+                    string result1 = "моб - Ошибка входа (пин)";
+                    string result = await service.LoginLog(ot_uid, fio, otdel, uniq, result1);
                     await DisplayAlert("Ошибка", "Неправильный ПИН", "OK");
                     enteredPin = string.Empty;
                     PinEntry.Text = string.Empty;
@@ -98,7 +101,7 @@ public partial class PinVerificationPage : ContentPage
             var answer = await Shell.Current.DisplayAlert("Подтвердите действие", "Доступна новая версия приложения, хотите обновить?", "Да", "Нет");
             if (answer)
             {
-                Uri uri = new Uri("https://play.google.com/store/apps/details?id=com.companyname.  MauiApp1");
+                Uri uri = new Uri("https://apps.apple.com/kg/app/creditarm/id6673905182");
                 await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
             }
         }
